@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 const Navebar = () => {
    const location = useLocation();
-   console.log(location)
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
