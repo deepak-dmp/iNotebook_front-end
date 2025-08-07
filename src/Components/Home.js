@@ -8,17 +8,17 @@ const Home = () => {
       </h1>
     <form className="row g-3">
   <div className="col-md-12">
-    <label for="inputEmail4" className="form-label">Email</label>
+    <label htmlFor="inputEmail4" className="form-label">Email</label>
     <input type="email" className="form-control" id="inputEmail4"/>
   </div>
   <div className="col-md-12">
-    <label for="inputPassword4" className="form-label">Password</label>
+    <label htmlFor="inputPassword4" className="form-label">Password</label>
     <input type="password" className="form-control" id="inputPassword4" />
   </div>
   <div className="col-12">
     <div className="form-check">
       <input className="form-check-input" type="checkbox" id="gridCheck"/>
-      <label className="form-check-label" for="gridCheck">
+      <label className="form-check-label" htmlFor="gridCheck">
         Check me out
       </label>
     </div>
