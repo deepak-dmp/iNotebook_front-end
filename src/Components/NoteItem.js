@@ -2,7 +2,7 @@ import {React, useContext} from 'react'
 import NoteContext from '../context/notes/noteContext'
 
 function NoteItem(props) {
-  const {deleteNote}=useContext(NoteContext)
+  const {deleteNote,}=useContext(NoteContext)
   const {note,updateNote} = props
   return (
     <div className='col-3'>

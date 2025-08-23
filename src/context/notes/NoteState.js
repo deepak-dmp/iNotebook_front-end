@@ -4,7 +4,17 @@ import { useState } from "react";
 const NoteState = (props) => {
     const host="http://localhost:5000"
   const initialNotes = [];
+  const [alert,setAlert]=useState(null);
 
+  const showAlert = (message,type)=>{
+    setAlert({
+      message:message,
+      status:type
+    })
+    setTimeout(()=>{
+      setAlert(null)
+    },1500);
+  }
   
   const [notes, setNote] = useState(initialNotes);
 
@@ -44,6 +54,7 @@ const NoteState = (props) => {
       return note._id !== id;
     });
     setNote(newnote);
+    showAlert("Note Deleted successfully","success")
   };
 
   //Edit NOtes
@@ -94,7 +105,7 @@ const NoteState = (props) => {
   };
 
   return (
-    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes}}>
+    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes,alert,showAlert}}>
       {props.children}
     </NoteContext.Provider>
   );
