@@ -18,7 +18,7 @@ function Login() {
     const json = await response.json()
     console.log(json);
     if(json.success)
-      {localStorage.setItem('token',JSON.authtoken);
+      {localStorage.setItem('authtoken',json.authtoken);
       history("/");
       showAlert("Login Successfully","success")
 
